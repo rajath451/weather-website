@@ -22,22 +22,22 @@ async function checkWeather(city) {
         const weatherMain = data.weather[0].main.toLowerCase();
         switch (weatherMain) {
             case "clouds":
-                weathericon.src = "cloud.png";
+                weathericon.src = "./cloud.png";
                 break;
             case "clear":
-                weathericon.src = "clear.png";
+                weathericon.src = "./clear.png";
                 break;
             case "rain":
-                weathericon.src = "rain.png";
+                weathericon.src = "./rain.png";
                 break;
             case "drizzle":
-                weathericon.src = "drizzle.png";
+                weathericon.src = "/.drizzle.png";
                 break;
             case "mist":
-                weathericon.src = "mist.png";
+                weathericon.src = "./mist.png";
                 break;
             default:
-                weathericon.src = "default.png"; // fallback image
+                weathericon.src = "./default.png"; // fallback image
         }
 
         document.querySelector(".weather").style.display = "block";
@@ -55,3 +55,4 @@ searchBtn.addEventListener("click", () => {
         alert("Please enter a city name.");
     }
 });
+
